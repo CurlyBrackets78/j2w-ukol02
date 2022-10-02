@@ -33,7 +33,7 @@ public class CitatyController {
 
 
    ModelAndView modelAndView = new ModelAndView("index");
-    modelAndView.addObject("quote", quoteItem.listIterator().nextIndex());
+    modelAndView.addObject("quote", quoteItem.get(randomNumber));
     modelAndView.addObject("bgImage", String.format("/images/obr-%d.jpg", randomNumber));
 
     return modelAndView;
