@@ -6,6 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.io.InputStream;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Random;
 
 @Controller
@@ -32,7 +33,7 @@ public class CitatyController {
 
 
    ModelAndView modelAndView = new ModelAndView("index");
-    modelAndView.addObject("quote", "quoteItem");
+    modelAndView.addObject("quote", quoteItem.listIterator().nextIndex());
     modelAndView.addObject("bgImage", String.format("/images/obr-%d.jpg", randomNumber));
 
     return modelAndView;
